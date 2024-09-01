@@ -2,6 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: myFont;
+    src: url('BebasNeue.ttf');
+}
+
+@font-face {
+    font-family: LightFont;
+    src: url('./BebasNeue-Light.ttf')
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +22,17 @@
     scroll-padding-top: 2rem;
 }
 
+body {
+    background-color: #F6FEF2;
+}
+
 /* Navbar */
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 23px 135px;
+    /* padding: 23px 135px; */
+    padding: 1.438rem 8.438rem;
 }
 
 .menu-container {
@@ -48,7 +65,7 @@
     color: #000000;
 }
 
-..nav_email a {
+.nav_email a {
     text-decoration: underline;
 }
 
@@ -105,6 +122,62 @@
 }
 
 /* menu */
+.menu_elements {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 100vh;
+    background: rgb(101, 170, 101);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu_elements.active {
+    display: flex;
+    align-items: normal;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu_elements li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.menu_elements.active li {
+    opacity: 1;
+    width: 100%;
+    height: 2.4rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transform: translateY(0);
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.menu_elements.active li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Light background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    color: #333;
+    /* Change text color on hover if needed */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+.menu_elements a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .menu-icon {
     display: flex;
     flex-direction: column;
@@ -115,15 +188,14 @@
     z-index: 200;
     transition: 0.3s;
     width: 30px;
-    /* Ensure it has a size */
     height: 24px;
 }
 
 .menu-icon div {
     background-color: #000000;
-    /* Set the background color for the lines */
-    height: 2px;
-    width: 24px;
+    height: 4px;
+    width: 30px;
+    border-radius: 74px;
     transition: 0.3s;
 }
 
@@ -136,34 +208,207 @@
 }
 
 .move .line3 {
-    transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-7px, -8px);
 }
 
-/* ul */
-.menu_elements {
-    position: absolute;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
-    background: red;
+/* Header End */
+.main_container_emp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 23px 135px; */
+    padding: 1.438rem 8.438rem;
+}
+
+.emp_part_a,
+.emp_part_b {
+    width: 50%;
+}
+
+.emp_part_a h3 {
+    font-family: LightFont;
+    font-weight: 300;
+    font-size: 2.7rem;
+    margin: -0.5rem 0;
+}
+
+.emp_part_a h2 {
+    font-family: LightFont;
+    font-weight: 300;
+    font-size: 6rem;
+}
+
+.emp_part_a h1 {
+    font-family: myFont;
+    font-weight: 500;
+    font-size: 13rem;
+    margin: -2rem 0;
+}
+
+.emp_part_a p {
+    font-family: Poppins;
+    font-size: 0.98rem;
+    font-weight: 400;
+}
+
+.inputfield_but {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 48.38rem;
+    height: 5.5rem;
+    border-radius: 6.875rem;
+    background-color: #FFFFFF;
+    margin: 1.25rem 0 0 0;
+}
+
+.inputfield_but input {
+    font-family: Poppins;
+    width: 28.2rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+.inputfield_but button {
+    width: 15.5rem;
+    height: 4.125rem;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #44B5FF;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5.5rem;
+    cursor: pointer;
+}
+
+.inputfield_but button:hover {
+    background-color: #3399CC;
+    color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    animation: bounce 0.5s;
+}
+
+/* part_b */
+.emp_part_b{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.form_container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 50px 20px;
-    text-align: center;
-    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-    z-index: 100;
-}
-.menu_elements.active{
-    right: 0;
-}
-.menu_elements li {
-    font-size: 22px;
-    font-weight: 500;
+    width: 30.938rem;
+    height: 39.188rem;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.menu_elements a {
-    text-decoration: none;
-    color: #000000;
+.form_container h2 {
+    font-family: myFont;
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.form_container p {
+    font-family: Poppins;
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin: 0 0 0.938rem 0;
+}
+
+.name_field {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 22.25rem;
+    height: 3.125rem;
+    border: 1px solid lightgray;
+    border-radius: 6.875rem;
+    background-color: #FFFFFF;
+    margin: 0px 0 1.25rem 0;
+}
+
+.name_field i {
+    font-size: 1.0rem;
+}
+
+.name_field input {
+    width: 80%;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.name_field input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.message_field {
+    width: 22.25rem;
+    height: 8.375rem;
+    border: 1px solid lightgray;
+    border-radius: 1.8rem;
+    background-color: #FFFFFF;
+    margin: 0px 0 1.25rem 0;
+    padding: 16px 14px;
+}
+
+.message_field i {
+    font-size: 0.8rem;
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.message_field input {
+    width: 80%;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 5px;
+}
+
+.message_field input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.form_container button {
+    width: 22.5rem;
+    height: 4.125rem;
+    font-family: Poppins;
+    font-size: 1.463rem;
+    font-weight: 600;
+    background-color: #44B5FF;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5.5rem;
+    cursor: pointer;
+}
+
+.form_container button:hover {
+    background-color: #3399CC;
+    color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    animation: bounce 0.5s;
+}
+.pic_container img{
+width: 100%;
+height: 39.188rem;
 }
