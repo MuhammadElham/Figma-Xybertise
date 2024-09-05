@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 @font-face {
     font-family: myFont;
     src: url('BebasNeue.ttf');
@@ -437,7 +439,8 @@ body {
 
 /* Slider Image Styling */
 .loopslider figure img {
-    width: 100%;
+    /* width: 100%; */
+    width: 80%;
     height: auto;
     border-radius: 20px;
 }
@@ -451,7 +454,8 @@ body {
 
 .loopslider-container .loopslider {
     margin: 0 auto;
-    height: 290px;
+    /* height: 290px; */
+    height: 250px;
     position: relative;
     overflow: hidden;
 }
@@ -555,15 +559,37 @@ body {
     font-size: 600;
     font-weight: 0.731rem;
 }
-.feeds_container{
-    width: 147.5px;
+
+/* Feedback section */
+.feedback {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* .feedback_part_a,
+.feedback_part_b {
+    width: 50%;
+} */
+
+.feedback_part_a {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 20px;
+}
+
+.feeds_container {
+    /* width: 147.5px; */
     height: 76px;
 }
+
 .feeds_container p {
     font-family: Poppins;
     font-size: 9px;
     font-weight: 800;
 }
+
 .feed_log img {
     width: 24px;
     height: 24px;
@@ -573,11 +599,19 @@ body {
     border: none;
     outline: none;
 }
-.logo_name{
+
+#hand {
+    width: 55.37px;
+    height: 49.03px;
+
+}
+
+.logo_name {
     display: flex;
     align-items: center;
     gap: 6px;
 }
+
 .feed_names #feedname {
     color: #363EFF;
     font-size: 8px;
@@ -589,14 +623,113 @@ body {
     font-weight: 400;
     color: #3C3C43;
 }
-.show_original{
+
+.show_original {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .show_original p {
     color: #818188;
     padding-top: 7px;
     font-size: 8px;
     font-weight: 400;
+}
+
+.feed_pat_b_images_and_logos {
+    display: flex;
+    align-items: center;
+    gap: 0.688rem;
+}
+
+.feed_part_b_images {
+    display: flex;
+    align-items: center;
+}
+
+.feed_part_b_images img {
+    width: 27.5px;
+    height: 27.5px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    outline: none;
+}
+
+.feed_part_b_images #feed_b_img {
+    margin: 0 0 0 -14px;
+}
+
+.feed_part_b_logos img {
+    width: 10px;
+    height: 10px;
+}
+
+.feed_part_b_logos #feed_b_logo {
+    margin: 0 0 0 -4px;
+}
+
+.feed_part_b_logos p {
+    font-family: Poppins;
+    font-size: 0.446rem;
+    color: #656161;
+    font-weight: 600;
+}
+
+.feedback_part_b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback_part_b h2 {
+    font-family: Anton;
+    font-size: 1.234rem;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.feedback_part_b p {
+    font-family: Poppins;
+    font-size: 0.5rem;
+    font-weight: 500;
+    color: gray;
+    line-height: 0.875rem;
+}
+
+.brands_images {
+    display: flex;
+    align-items: center;
+    gap: 0.719rem;
+}
+
+.brands_images #trustpilot {
+    width: 5.375rem;
+    height: 2.219rem;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    outline: none;
+}
+
+.brands_images #google {
+    width: 3.875rem;
+    height: 2.156rem;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    outline: none;
+    padding: 5px 0 0 0;
+}
+
+.brands_images #clutch {
+    width: 5.063rem;
+    height: 2.219rem;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    outline: none;
+    padding: 4px 0 0 0;
 }
